@@ -6,12 +6,12 @@ form {
 }
 
 .cvForm {
-    border: 2px solid;
     padding: 20px;
     grid-area: cvForm;
 
     .logo {
         @include flexCenter(row, center, space-evenly);
+
     }
     
     
@@ -21,19 +21,36 @@ form {
     
     input {
         width: 100%;
+        background-color: rgb(41, 41, 41);
+    }
+
+    textarea {
+        background-color: rgb(41, 41, 41);
     }
     
     .personalData, 
     .experience, 
     .skills, 
-    .education {
-        border: 1px solid;
+    .education, header {
+        background-color: $secondaryColor;
     }
     
     .namesSection, 
     .contactsSection {
         display: flex;
     }
+}
+
+header {
+    button {
+        background-color: $primaryColor;
+        border: none;
+    }
+}
+
+.newBtn {
+    background-color: rgb(41, 41, 41);
+    color: white;
 }
 
 .cvForm > div ~ * {

@@ -1,25 +1,44 @@
+@import url(https://fonts.googleapis.com/css2?family=Rubik+Mono+One:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap);
 .cvPreview {
   height: 29cm;
   width: 21cm;
-  border: 2px solid;
-  padding: 40px;
+  padding: 0 70px 0 70px;
+  background: linear-gradient(132deg, rgb(92, 54, 13) 5%, rgb(0, 0, 0) 29%, rgb(0, 0, 0) 73%, rgb(92, 54, 13) 94%);
+  color: white;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
   grid-area: cvPreview;
 }
-
-.head {
+.cvPreview .head {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
-
-.image {
+.cvPreview .image {
   height: 100px;
   width: 100px;
-  background-color: black;
+  background-color: white;
   border-radius: 50%;
 }
-
-.experience, .grouped, .group1, .group2 {
+.cvPreview .developer {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 210px;
+  background-color: #f9a01b;
+  color: #000000;
+  border-radius: 20px;
+}
+.cvPreview .experience, .cvPreview .grouped, .cvPreview .group1, .cvPreview .group2 {
+  display: flex;
+}
+.cvPreview h1, .cvPreview h2 {
+  font-family: Rubik Mono One, sans-serif;
+}
+.cvPreview .group1, .cvPreview .group2, .cvPreview .universityName {
+  color: #f9a01b;
 }/*# sourceMappingURL=cv_preview.css.map */

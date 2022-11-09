@@ -1,3 +1,9 @@
+// Variables
+$primaryColor: #f9a01b;
+$secondaryColor: rgb(28, 28, 28);
+$color-black: #000000;
+
+// Mixins
 @mixin flexCenter($direction, $alignItem, $justifyContent) {
     display: flex;
     flex-direction: $direction;

@@ -8,7 +8,7 @@ class Skills extends React.Component {
                 <form>
                     <input type="text" placeholder="Language or Technology"/>
                 </form>
-                <button>New</button>
+                <button className="newBtn">New</button>
             </div>
         );
     }

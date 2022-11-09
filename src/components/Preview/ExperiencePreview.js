@@ -4,7 +4,7 @@ class ExperiencePrev extends React.Component {
     render() {
         return(
             <div className="experience">
-                <h2>Experience</h2>
+                <h2>EXPERIENCE</h2>
                 <div>
                     <p>Senior Software Engineer</p>
                     <p>Dice | 2016 - Present. I provided technical leadership for

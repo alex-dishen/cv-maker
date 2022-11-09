@@ -6,13 +6,13 @@ class EducationPrev extends React.Component {
             <div>
                 <h2>EDUCATION</h2>
                 <div>
-                    <p>KHMELNYTSKYI NATIONAL UNIVERSITY</p>
+                    <p className="universityName">KHMELNYTSKYI NATIONAL UNIVERSITY</p>
                     <p>Bachelor Degree: Germanic Philology and Translation Studies:
                         English and Second Foreign Language
                     </p>
                 </div>
                 <div>
-                    <p>KHMELNYTSKYI NATIONAL UNIVERSITY</p>
+                    <p className="universityName">KHMELNYTSKYI NATIONAL UNIVERSITY</p>
                     <p>Bachelor Degree: Germanic Philology and Translation Studies:
                         English and Second Foreign Language
                     </p>

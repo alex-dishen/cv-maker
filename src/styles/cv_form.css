@@ -7,7 +7,6 @@ form {
 }
 
 .cvForm {
-  border: 2px solid;
   padding: 20px;
   grid-area: cvForm;
 }
@@ -22,16 +21,30 @@ form {
 }
 .cvForm input {
   width: 100%;
+  background-color: rgb(41, 41, 41);
+}
+.cvForm textarea {
+  background-color: rgb(41, 41, 41);
 }
 .cvForm .personalData,
 .cvForm .experience,
 .cvForm .skills,
-.cvForm .education {
-  border: 1px solid;
+.cvForm .education, .cvForm header {
+  background-color: rgb(28, 28, 28);
 }
 .cvForm .namesSection,
 .cvForm .contactsSection {
   display: flex;
+}
+
+header button {
+  background-color: #f9a01b;
+  border: none;
+}
+
+.newBtn {
+  background-color: rgb(41, 41, 41);
+  color: white;
 }
 
 .cvForm > div ~ * {

@@ -18,7 +18,7 @@ function App() {
         <Skills />
         <Education />
       </div>
-      <CVPreview />
+      {/* <CVPreview /> */}
     </>
   );
 }

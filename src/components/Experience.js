@@ -12,7 +12,7 @@ class Experience extends React.Component {
                     <input type="text" placeholder="Start date of employment"/>
                     <input type="text" placeholder="End date of employment"/>
                 </form>
-                <button>New</button>
+                <button className="newBtn">New</button>
             </div>
         );
     }

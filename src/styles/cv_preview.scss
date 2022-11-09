@@ -1,24 +1,47 @@
+@import url(https://fonts.googleapis.com/css2?family=Rubik+Mono+One:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap);
 @import './variables';
 
 .cvPreview {
     height: 29cm;
     width: 21cm;
-    border: 2px solid;
-    padding: 40px;
+    // padding:60px;
+    padding: 0 70px 0 70px;
+    background: linear-gradient(132deg, rgba(92,54,13,1) 5%, rgba(0,0,0,1) 29%, rgba(0,0,0,1) 73%, rgba(92,54,13,1) 94%);
+    color: white;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
     grid-area: cvPreview;
-}
 
-.head {
-    @include flexCenter(row, center, space-between)
-}
+    .head {
+        @include flexCenter(row, center, space-between)
+    }
+    
+    .image {
+        height: 100px;
+        width: 100px;
+        background-color: white;
+        border-radius: 50%;
+    }
 
-.image {
-    height: 100px;
-    width: 100px;
-    background-color: black;
-    border-radius: 50%;
-}
+    .developer {
+        @include flexCenter(row, center, center);
+        height: 40px;
+        width: 210px;
+        background-color: $primaryColor;
+        color: $color-black;
+        border-radius: 20px;
+    }
+    
+    .experience, .grouped, .group1, .group2 {
+        display: flex;
+    }
+    
+    h1, h2 {
+        font-family: Rubik Mono One, sans-serif;
+    }
 
-.experience, .grouped, .group1, .group2 {
-    display: flex;
+    .group1, .group2, .universityName {
+        color: $primaryColor;
+    }
 }

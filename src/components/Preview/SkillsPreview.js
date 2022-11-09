@@ -4,7 +4,7 @@ class SkillsPrev extends React.Component {
     render() {
         return(
             <div>
-                <h2>Skills</h2>
+                <h2>SKILLS</h2>
                 <p>HTML</p>
                 <p>CSS</p>
                 <p>JavaScript</p>

@@ -1,6 +1,10 @@
+@import url(https://fonts.googleapis.com/css2?family=Kumbh+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap);
 #root {
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-template-areas: "cvForm cvPreview";
   justify-content: space-evenly;
+  background-color: #000000;
+  color: white;
+  font-family: Kumbh Sans, sans-serif;
 }/*# sourceMappingURL=App.css.map */

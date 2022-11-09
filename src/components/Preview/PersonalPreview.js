@@ -7,7 +7,7 @@ class NameAndPitch extends React.Component {
                 <div className="head">
                     <div>
                         <h1>Oleksandr<br/>Didyshen</h1>
-                        <div>Front-End Developer</div>
+                        <div className="developer">Front-End Developer</div>
                     </div>
                     <div className="image"></div>
                 </div>
