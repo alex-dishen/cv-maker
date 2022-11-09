@@ -11,8 +11,10 @@ class CVPreview extends React.Component {
             <div className="cvPreview">
                 <NameAndPitch />
                 <ExperiencePrev />
-                <EducationPrev />
-                <SkillsPrev />
+                <div className="grouped">
+                    <EducationPrev />
+                    <SkillsPrev />
+                </div>
                 <Contacts />
             </div>
         );
