@@ -1,0 +1,44 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.cvForm {
+  border: 2px solid;
+  padding: 20px;
+  grid-area: cvForm;
+}
+
+.cvForm > div ~ * {
+  margin-top: 15px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.createdBy {
+  text-align: center;
+}
+
+input {
+  width: 100%;
+}
+
+.personalData,
+.experience,
+.skills,
+.education {
+  border: 1px solid;
+}
+
+.namesSection,
+.contactsSection {
+  display: flex;
+}/*# sourceMappingURL=cv_form.css.map */

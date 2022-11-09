@@ -3,12 +3,10 @@ import React from "react";
 class Skills extends React.Component {
     render() {
         return (
-            <div>
+            <div className="skills">
                 <p>Skills</p>
                 <form>
-                    <div>
-                        <input type="text" placeholder="Language or Technology"/>
-                    </div>
+                    <input type="text" placeholder="Language or Technology"/>
                 </form>
                 <button>New</button>
             </div>

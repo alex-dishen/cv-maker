@@ -1,0 +1,41 @@
+@import './variables';
+
+form {
+    @include flexCenter(column, center, center);
+    gap: 10px;
+}
+
+.cvForm {
+    border: 2px solid;
+    padding: 20px;
+    grid-area: cvForm;
+}
+
+.cvForm > div ~ * {
+    margin-top: 15px;
+}
+
+.logo {
+    @include flexCenter(row, center, space-evenly);
+}
+
+
+.createdBy {
+    text-align: center;
+}
+
+input {
+    width: 100%;
+}
+
+.personalData, 
+.experience, 
+.skills, 
+.education {
+    border: 1px solid;
+}
+
+.namesSection, 
+.contactsSection {
+    display: flex;
+}

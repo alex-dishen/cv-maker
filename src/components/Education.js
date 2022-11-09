@@ -3,8 +3,8 @@ import React from "react";
 class Education extends React.Component {
     render() {
         return (
-            <div>
-                <h3>Education</h3>
+            <div className="education">
+                <p>Education</p>
                 <form>
                     <input type="text" placeholder="Your School"/>
                     <input type="text" placeholder="Your Degree"/>
