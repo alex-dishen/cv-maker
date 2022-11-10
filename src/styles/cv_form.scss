@@ -6,32 +6,80 @@ form {
 }
 
 .cvForm {
-    padding: 20px;
+    margin-top: 25px;
     grid-area: cvForm;
 
-    .logo {
-        @include flexCenter(row, center, space-evenly);
+    header {
+        border-radius: 17px;
 
+        .head {
+            @include flexCenter(row, center, space-between);
+            gap: 50px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .buttonSection {
+            display: flex;
+            gap:8px;
+        }
+
+        button,
+        .createdBy,
+        .a {
+            @include flexCenter(row, center, center);
+        }
+
+        button {
+            padding: 8px 11px 8px 11px;
+            gap: 10px;
+            background-color: $primaryColor;
+            border: none;
+            border-radius: 13px;
+            cursor: pointer;
+        }
+
+        img {
+            height: 20px;
+        }
+        
+        .createdBy {
+            margin-top: 25px;
+            gap: 8px;
+            text-align: center;
+        }
+
+        a {
+            padding: 10px 15px 10px 15px;
+            gap: 8px;
+            background-color: $color-grey;
+            color: white;
+            border-radius: 12px;
+            cursor: pointer;
+            text-decoration: none;
+
+            &:hover {
+                background-color: #2e2e2e;
+                color: $primaryColor;
+                transition: .3s;
+            }
+        }
     }
+
     
-    
-    .createdBy {
-        text-align: center;
-    }
-    
-    input {
+    input, textarea {
         width: 100%;
         background-color: rgb(41, 41, 41);
     }
-
-    textarea {
-        background-color: rgb(41, 41, 41);
-    }
     
+    header,
     .personalData, 
     .experience, 
     .skills, 
-    .education, header {
+    .education {
+        padding: 25px;
         background-color: $secondaryColor;
     }
     
@@ -41,18 +89,11 @@ form {
     }
 }
 
-header {
-    button {
-        background-color: $primaryColor;
-        border: none;
-    }
-}
-
 .newBtn {
     background-color: rgb(41, 41, 41);
     color: white;
 }
 
-.cvForm > div ~ * {
-    margin-top: 15px;
+.cvForm > header ~ * {
+    margin-top: 25px;
 }

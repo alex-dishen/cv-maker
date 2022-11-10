@@ -5,17 +5,19 @@ import gitHub from '../assets/github.svg'
 function Header() {
     return (
         <header>
-            <div className="logo">
-                <h2>CV Maker</h2>
-                <div>
+            <div className="head">
+                <h1>CV Maker</h1>
+                <div className='buttonSection'>
                     <button><img src={save} alt="Save" /> Save</button>
                     <button><img src={autofill} alt="Autofill" /> Autofill</button>
                 </div>
             </div>
             <div className="createdBy">
-                Created by <button>
-                                <img src={gitHub} alt="" />alex-dishen
-                            </button>
+                Created by <span>
+                                <a href="https://github.com/alex-dishen" target='_blank'>
+                                    <img src={gitHub} alt="" />alex-dishen
+                                </a>
+                            </span>
             </div>
         </header>
     );

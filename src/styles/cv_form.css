@@ -7,29 +7,74 @@ form {
 }
 
 .cvForm {
-  padding: 20px;
+  margin-top: 25px;
   grid-area: cvForm;
 }
-.cvForm .logo {
+.cvForm header {
+  border-radius: 17px;
+}
+.cvForm header .head {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  gap: 50px;
 }
-.cvForm .createdBy {
+.cvForm header h1 {
+  margin: 0;
+}
+.cvForm header .buttonSection {
+  display: flex;
+  gap: 8px;
+}
+.cvForm header button,
+.cvForm header .createdBy,
+.cvForm header .a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.cvForm header button {
+  padding: 8px 11px 8px 11px;
+  gap: 10px;
+  background-color: #f9a01b;
+  border: none;
+  border-radius: 13px;
+  cursor: pointer;
+}
+.cvForm header img {
+  height: 20px;
+}
+.cvForm header .createdBy {
+  margin-top: 25px;
+  gap: 8px;
   text-align: center;
 }
-.cvForm input {
+.cvForm header a {
+  padding: 10px 15px 10px 15px;
+  gap: 8px;
+  background-color: rgb(36, 36, 36);
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.cvForm header a:hover {
+  background-color: #2e2e2e;
+  color: #f9a01b;
+  transition: 0.3s;
+}
+.cvForm input, .cvForm textarea {
   width: 100%;
   background-color: rgb(41, 41, 41);
 }
-.cvForm textarea {
-  background-color: rgb(41, 41, 41);
-}
+.cvForm header,
 .cvForm .personalData,
 .cvForm .experience,
 .cvForm .skills,
-.cvForm .education, .cvForm header {
+.cvForm .education {
+  padding: 25px;
   background-color: rgb(28, 28, 28);
 }
 .cvForm .namesSection,
@@ -37,16 +82,11 @@ form {
   display: flex;
 }
 
-header button {
-  background-color: #f9a01b;
-  border: none;
-}
-
 .newBtn {
   background-color: rgb(41, 41, 41);
   color: white;
 }
 
-.cvForm > div ~ * {
-  margin-top: 15px;
+.cvForm > header ~ * {
+  margin-top: 25px;
 }/*# sourceMappingURL=cv_form.css.map */
