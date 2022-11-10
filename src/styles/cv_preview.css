@@ -1,13 +1,16 @@
-@import url(https://fonts.googleapis.com/css2?family=Rubik+Mono+One:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Alfa+Slab+One:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap);
 .cvPreview {
   height: 29cm;
   width: 21cm;
-  padding: 0 70px 0 70px;
-  background: linear-gradient(132deg, rgb(92, 54, 13) 5%, rgb(0, 0, 0) 29%, rgb(0, 0, 0) 73%, rgb(92, 54, 13) 94%);
+  padding: 0 75px 0 85px;
+  margin: 30px 0 30px 0;
+  background: linear-gradient(124deg, rgb(92, 54, 13) 5%, rgb(0, 0, 0) 29%, rgb(0, 0, 0) 73%, rgb(92, 54, 13) 94%);
   color: white;
   font-family: Montserrat, sans-serif;
   font-size: 14px;
+  box-shadow: 0px 5px 15px rgb(92, 54, 13), 0px -5px 30px rgb(92, 54, 13);
+  border-radius: 30px;
   grid-area: cvPreview;
 }
 .cvPreview .head {
@@ -15,12 +18,18 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin-top: 25px;
 }
-.cvPreview .image {
-  height: 100px;
-  width: 100px;
-  background-color: white;
-  border-radius: 50%;
+.cvPreview h1,
+.cvPreview h2 {
+  margin: 0;
+  font-family: Alfa Slab One, sans-serif;
+  font-size: 38px;
+  letter-spacing: 2px;
+}
+.cvPreview .lastName {
+  position: relative;
+  left: 70px;
 }
 .cvPreview .developer {
   display: flex;
@@ -31,14 +40,90 @@
   width: 210px;
   background-color: #f9a01b;
   color: rgb(0, 0, 0);
+  margin: 20px 0 15px 0;
+  font-size: 15px;
   border-radius: 20px;
 }
-.cvPreview .experience, .cvPreview .grouped, .cvPreview .group1, .cvPreview .group2 {
+.cvPreview .image {
+  position: relative;
+  right: 20px;
+  height: 120px;
+  width: 120px;
+  background-color: white;
+  border-radius: 50%;
+}
+.cvPreview .pitch {
+  font-style: italic;
+}
+.cvPreview hr {
+  margin: 20px 0 20px 0;
+}
+.cvPreview h2 {
+  font-size: 26px;
+}
+.cvPreview .experience,
+.cvPreview .education-skills,
+.cvPreview .skills,
+.cvPreview .contacts,
+.cvPreview .location-mail > div,
+.cvPreview .number-portfolio > div {
   display: flex;
 }
-.cvPreview h1, .cvPreview h2 {
-  font-family: Rubik Mono One, sans-serif;
+.cvPreview .experience {
+  gap: 30px;
 }
-.cvPreview .group1, .cvPreview .group2, .cvPreview .universityName {
+.cvPreview .experience > div,
+.cvPreview .education,
+.cvPreview .skillsSection {
+  width: 100%;
+}
+.cvPreview .position,
+.cvPreview .universityName {
   color: #f9a01b;
+}
+.cvPreview .education-skills {
+  margin-top: 15px;
+}
+.cvPreview .skillsSection h2 {
+  margin-bottom: 14px;
+}
+.cvPreview .skills {
+  position: relative;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 200px;
+  left: 13px;
+  gap: 25px;
+}
+.cvPreview .skills p {
+  margin: 0;
+  display: list-item;
+}
+.cvPreview .contacts {
+  justify-content: space-between;
+}
+.cvPreview .location-mail,
+.cvPreview .number-portfolio {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0 10px 0;
+  gap: 30px;
+}
+.cvPreview .location-mail > div,
+.cvPreview .number-portfolio > div {
+  gap: 10px;
+  align-items: center;
+}
+.cvPreview .imgHolder {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  background-color: #f9a01b;
+  border-radius: 50%;
+}
+.cvPreview img {
+  height: 32px;
 }/*# sourceMappingURL=cv_preview.css.map */

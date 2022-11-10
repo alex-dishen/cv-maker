@@ -1,6 +1,10 @@
 @import url(https://fonts.googleapis.com/css2?family=Kumbh+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap);
 @import './variables';
 
+body {
+    background-color: $color-black;
+}
+
 *::selection {
     background-color: $primaryColor;
     color: $color-black;
@@ -11,19 +15,6 @@
     grid-template-columns: repeat(2, auto);
     grid-template-areas: 'cvForm cvPreview';
     justify-content: space-evenly;
-    background-color: $color-black;
     color: white;
     font-family: Kumbh Sans, sans-serif;
-}
-
-img {
-    height: 32px;
-}
-
-.imgHolder {
-    @include flexCenter(row, center, center);
-    height: 40px;
-    width: 40px;
-    background-color: $primaryColor;
-    border-radius: 50%;
 }
