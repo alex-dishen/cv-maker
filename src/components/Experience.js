@@ -1,10 +1,11 @@
 import React from "react";
+import experience from '../assets/experience.svg';
 
 class Experience extends React.Component {
     render() {
         return (
             <div className="experience">
-                <p>Practical Experience</p>
+                <p>Practical Experience <img src={experience} alt="Experience" /> </p>
                 <form>
                     <input type="text" placeholder="Company"/>
                     <input type="text" placeholder="Your Position"/>

@@ -1,4 +1,8 @@
 import React from "react";
+import location from '../../assets/location.svg';
+import phone from '../../assets/phone.svg';
+import mail from '../../assets/mail.svg';
+import portfolio from '../../assets/portfolio.svg';
 
 class NameAndPitch extends React.Component {
     render() {
@@ -34,21 +38,29 @@ class Contacts extends React.Component {
                 <hr />
                 <div className="group1">
                     <div>
-                        <img src="" alt="" />
+                        <div className="imgHolder">
+                            <img src={location} alt="Location" />
+                        </div>
                         <p>Ukraine, Khmelnytskyi</p>
                     </div>
                     <div>
-                        <img src="" alt="" />
+                        <div className="imgHolder">
+                            <img src={phone} alt="" />
+                        </div>
                         <p>+380972632200</p>
                     </div>
                 </div>
                 <div className="group2">
                     <div>
-                        <img src="" alt="" />
+                        <div className="imgHolder">
+                            <img src={mail} alt="E-Mail" />
+                        </div>
                         <p>didyshen.oleksandr@gmail.com</p>
                     </div>
                     <div>
-                        <img src="" alt="" />
+                        <div className="imgHolder">
+                            <img src={portfolio} alt="Portfolio" />
+                        </div>
                         <p>https://github.com/alex-dishen</p>
                     </div>
                 </div>

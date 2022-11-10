@@ -10,3 +10,15 @@
     color: white;
     font-family: Kumbh Sans, sans-serif;
 }
+
+img {
+    height: 32px;
+}
+
+.imgHolder {
+    @include flexCenter(row, center, center);
+    height: 40px;
+    width: 40px;
+    background-color: $primaryColor;
+    border-radius: 50%;
+}

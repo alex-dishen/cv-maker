@@ -7,4 +7,19 @@
   background-color: #000000;
   color: white;
   font-family: Kumbh Sans, sans-serif;
+}
+
+img {
+  height: 32px;
+}
+
+.imgHolder {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  background-color: #f9a01b;
+  border-radius: 50%;
 }/*# sourceMappingURL=App.css.map */

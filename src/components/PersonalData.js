@@ -1,10 +1,11 @@
 import React from "react";
+import passport from '../assets/passport.svg';
 
 class PersonalData extends React.Component {
     render() {
         return (
             <div className="personalData">
-                <p>Personal Data</p>
+                <p>Personal Data <img src={passport} alt="passport" /> </p>
                 <form>
                     <div className="namesSection">
                         <input type="text" placeholder="First Name"/>
