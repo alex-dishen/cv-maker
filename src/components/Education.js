@@ -5,10 +5,10 @@ class Education extends React.Component {
     render() {
         return (
             <div className="education">
-                <p>Education <img src={education} alt="Education" /> </p>
+                <h2><img src={education} alt="Education" />Education</h2>
                 <form>
-                    <input type="text" placeholder="Your School"/>
-                    <input type="text" placeholder="Your Degree"/>
+                    <input type="text" placeholder="School"/>
+                    <input type="text" placeholder="Degree"/>
                     <input type="text" placeholder="Time frame"/>
                 </form>
             </div>

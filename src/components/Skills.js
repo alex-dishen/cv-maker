@@ -5,11 +5,11 @@ class Skills extends React.Component {
     render() {
         return (
             <div className="skills">
-                <p>Skills <img src={skills} alt="Skills" /> </p>
+                <h2><img src={skills} alt="Skills" />Skills</h2>
                 <form>
                     <input type="text" placeholder="Language or Technology"/>
                 </form>
-                <button className="newBtn">New</button>
+                <button className="newBtn">+ New</button>
             </div>
         );
     }

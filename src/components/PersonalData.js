@@ -5,20 +5,20 @@ class PersonalData extends React.Component {
     render() {
         return (
             <div className="personalData">
-                <p>Personal Data <img src={passport} alt="passport" /> </p>
+                <h2><img src={passport} alt="passport" />Personal Data</h2>
                 <form>
                     <div className="namesSection">
                         <input type="text" placeholder="First Name"/>
                         <input type="text" placeholder="Last Name"/>
                     </div>
-                    <input type="text" placeholder="Your Address"/>
-                    <input type="text" placeholder="Your Portfolio"/>
-                    <input type="text" placeholder="Yur Niche: Font-End Developer"/>
+                    <input type="text" placeholder="Address"/>
+                    <input type="link" placeholder="Portfolio"/>
+                    <input type="text" placeholder="Niche: Font-End Developer"/>
                     <div className="contactsSection">
-                        <input type="text" placeholder="Your E-Mail"/>
-                        <input type="number" placeholder="Your phone number"/>
+                        <input type="text" placeholder="E-Mail"/>
+                        <input type="number" placeholder="Phone number"/>
                     </div>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <textarea placeholder="Tell something about yourself to stand out from other candidates"></textarea>
                 </form>
             </div>
         );

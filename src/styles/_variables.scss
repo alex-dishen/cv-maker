@@ -1,8 +1,9 @@
 // Variables
 $primaryColor: #f9a01b;
 $secondaryColor: rgb(28, 28, 28);
-$color-black: #000000;
+$color-black: rgb(0, 0, 0);
 $color-grey: rgb(36, 36, 36);
+$button-background: rgb(46, 46, 46);
 
 // Mixins
 @mixin flexCenter($direction, $alignItem, $justifyContent) {

@@ -30,7 +30,7 @@
   height: 40px;
   width: 210px;
   background-color: #f9a01b;
-  color: #000000;
+  color: rgb(0, 0, 0);
   border-radius: 20px;
 }
 .cvPreview .experience, .cvPreview .grouped, .cvPreview .group1, .cvPreview .group2 {
