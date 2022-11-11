@@ -8,8 +8,8 @@ function Header() {
             <div className="head">
                 <h1>CV Maker</h1>
                 <div className='buttonSection'>
-                    <button><img src={save} alt="Save" /> Save</button>
-                    <button><img src={autofill} alt="Autofill" /> Autofill</button>
+                    <button><img src={save} alt="Save" /> <span>Save</span></button>
+                    <button><img src={autofill} alt="Autofill" /> <span>Autofill</span></button>
                 </div>
             </div>
             <div className="createdBy">

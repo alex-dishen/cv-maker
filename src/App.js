@@ -3,6 +3,7 @@ import Header from './components/Header';
 import PersonalData from './components/PersonalData';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
+import Contacts from './components/Contacts';
 import CVPreview from './components/Preview/CVPreview';
 import './styles/App.css'
 import './styles/normalize.css';
@@ -17,6 +18,7 @@ function App() {
         <Experience />
         <Skills />
         <Education />
+        <Contacts />
       </div>
       <CVPreview />
     </>

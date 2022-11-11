@@ -11,14 +11,9 @@ class PersonalData extends React.Component {
                         <input type="text" placeholder="First Name"/>
                         <input type="text" placeholder="Last Name"/>
                     </div>
-                    <input type="text" placeholder="Address"/>
-                    <input type="link" placeholder="Portfolio"/>
                     <input type="text" placeholder="Niche: Font-End Developer"/>
-                    <div className="contactsSection">
-                        <input type="text" placeholder="E-Mail"/>
-                        <input type="number" placeholder="Phone number"/>
-                    </div>
-                    <textarea placeholder="Tell something about yourself to stand out from other candidates"></textarea>
+                    <textarea placeholder="Tell something about yourself to
+                                 stand out from other candidates"></textarea>
                 </form>
             </div>
         );
