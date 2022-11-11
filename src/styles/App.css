@@ -28,7 +28,7 @@ body {
     grid-template-areas: "cvForm" "cvPreview";
   }
   .cvForm {
-    width: min(550px, 80vw);
+    width: min(550px, 86vw);
   }
 }
 @media (max-width: 860px) {
