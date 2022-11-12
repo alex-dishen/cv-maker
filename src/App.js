@@ -16,6 +16,16 @@ class App extends React.Component {
     super(props);
 
     this.state = {
+      newExperience: {
+        id: uniqid(),
+      },
+
+      experiences: [
+        {
+          id: uniqid(),
+        },
+      ],
+
       newSkill: {
         id: uniqid(),
         skill: '',
@@ -25,14 +35,34 @@ class App extends React.Component {
           {
               id: uniqid(),
               skill: ''
-          }
+          },
       ]
     }
 
+    this.addNewExperience = this.addNewExperience.bind(this);
+    this.removeExperience = this.removeExperience.bind(this);
     this.addNewSkill = this.addNewSkill.bind(this);
     this.removeSkill = this.removeSkill.bind(this);
   }
-  
+
+  addNewExperience() {
+    this.setState({
+      experiences: this.state.experiences.concat(this.state.newExperience),
+
+      newExperience: {
+        id: uniqid()
+      }
+    });
+  }
+
+  removeExperience(index) {
+    const list = [...this.state.experiences];
+    list.splice(index, 1);
+
+    this.setState({
+      experiences: list
+    });
+  }
   
   addNewSkill() {
     this.setState({
@@ -60,7 +90,10 @@ class App extends React.Component {
         <div className='cvForm'>
           <Header />
           <PersonalData />
-          <Experience />
+          <Experience 
+              experiences={this.state.experiences}
+              addNewExperience={this.addNewExperience}
+              removeExperience={this.removeExperience}/>
           <Skills 
               skills={this.state.skills} 
               addNewSkill={this.addNewSkill}

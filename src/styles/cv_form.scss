@@ -138,6 +138,14 @@ a:active {
         resize: none;
     }
 
+    h3 {
+        margin-top: 30px
+    }
+
+    .experience-quantity {
+        @include flexCenter(row, center, space-between);
+    }
+
     .skill {
         display: flex;
         width: 100%;
