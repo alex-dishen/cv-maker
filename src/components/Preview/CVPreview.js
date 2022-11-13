@@ -5,20 +5,21 @@ import EducationPrev from "./EducationPreview";
 import SkillsPrev from "./SkillsPreview";
 import '../../styles/cv_preview.css'
 
-class CVPreview extends React.Component {
-    render() {
-        return (
-            <div className="cvPreview">
-                <NameAndPitch />
-                <ExperiencePrev />
-                <div className="education-skills">
-                    <EducationPrev />
-                    <SkillsPrev />
-                </div>
-                <Contacts />
+function CVPreview({ info }) {
+    return (
+        <div className="cvPreview">
+            <NameAndPitch 
+                info={info}/>
+            <ExperiencePrev />
+            <div className="education-skills">
+                <EducationPrev 
+                    info={info}/>
+                <SkillsPrev />
             </div>
-        );
-    }
+            <Contacts 
+                info={info}/>
+        </div>
+    );
 }
 
 export default CVPreview;

@@ -1,25 +1,15 @@
 import React from "react";
 
-class EducationPrev extends React.Component {
-    render() {
-        return(
-            <div>
-                <h2>EDUCATION</h2>
-                <div className="education">
-                    <p className="universityName">KHMELNYTSKYI NATIONAL UNIVERSITY</p>
-                    <p>Bachelor Degree: Germanic Philology and Translation Studies:
-                        English and Second Foreign Language
-                    </p>
-                </div>
-                <div className="education">
-                    <p className="universityName">KHMELNYTSKYI NATIONAL UNIVERSITY</p>
-                    <p>Bachelor Degree: Germanic Philology and Translation Studies:
-                        English and Second Foreign Language
-                    </p>
-                </div>
+function EducationPrev({ info }) {
+    return(
+        <div className="educationSection">
+            <h2>EDUCATION</h2>
+            <div className="education">
+                <p className="universityName">{info[4].text.toUpperCase()}</p>
+                <p>{info[5].text}</p>
             </div>
-        );
-    }
+        </div>
+    );
 }
 
 export default EducationPrev;

@@ -86,6 +86,11 @@
 }
 .cvPreview .education-skills {
   margin-top: 15px;
+  gap: 30px;
+}
+.cvPreview .educationSection,
+.cvPreview .skillsSection {
+  width: 302px;
 }
 .cvPreview .skillsSection h2 {
   margin-bottom: 14px;
@@ -103,12 +108,13 @@
   display: list-item;
 }
 .cvPreview .contacts {
-  justify-content: space-between;
+  gap: 30px;
 }
 .cvPreview .location-mail,
 .cvPreview .number-portfolio {
   display: flex;
   flex-direction: column;
+  width: 302px;
   margin: 10px 0 10px 0;
   gap: 30px;
 }
@@ -116,6 +122,10 @@
 .cvPreview .number-portfolio > div {
   align-items: center;
   gap: 10px;
+}
+.cvPreview .location-mail > div p,
+.cvPreview .number-portfolio > div p {
+  word-break: break-all;
 }
 .cvPreview .imgHolder {
   display: flex;
@@ -126,6 +136,7 @@
   width: 40px;
   background-color: #f9a01b;
   border-radius: 50%;
+  flex-shrink: 0;
 }
 .cvPreview img {
   height: 32px;

@@ -16,6 +16,50 @@ class App extends React.Component {
     super(props);
 
     this.state = {
+      info: [
+        {
+          name: 'First Name',
+          text: ''
+        },
+
+        {
+          name: 'Last Name',
+          text: ''
+        },
+        {
+          name: 'Niche: Font-End Developer',
+          text: ''
+        },
+        {
+          name: 'Tell something about yourself to stand out from other candidates',
+          text: ''
+        },
+        {
+          name: 'School',
+          text: ''
+        },
+        {
+          name: 'Degree',
+          text: ''
+        },
+        {
+          name: 'Address',
+          text: ''
+        },
+        {
+          name: 'E-Mail',
+          text: ''
+        },
+        {
+          name: 'Phone number',
+          text: ''
+        },
+        {
+          name: 'Link to portfolio',
+          text: ''
+        }
+      ],
+
       newExperience: {
         id: uniqid(),
       },
@@ -39,10 +83,27 @@ class App extends React.Component {
       ]
     }
 
+    this.handleInfoChange = this.handleInfoChange.bind(this);
     this.addNewExperience = this.addNewExperience.bind(this);
     this.removeExperience = this.removeExperience.bind(this);
     this.addNewSkill = this.addNewSkill.bind(this);
     this.removeSkill = this.removeSkill.bind(this);
+  }
+
+  handleInfoChange(e) {
+    console.log(e.target.value.length)
+    const newInfo = this.state.info.map((information) => {
+      if(information.name === e.target.placeholder) {
+        information.text = e.target.value;
+        return information;
+      } else {
+        return information;
+      }
+    });
+
+    this.setState({
+      ...this.state, info: newInfo,
+    });
   }
 
   addNewExperience() {
@@ -89,7 +150,8 @@ class App extends React.Component {
       <>
         <div className='cvForm'>
           <Header />
-          <PersonalData />
+          <PersonalData 
+              outputInputValue={this.handleInfoChange}/>
           <Experience 
               experiences={this.state.experiences}
               addNewExperience={this.addNewExperience}
@@ -98,10 +160,13 @@ class App extends React.Component {
               skills={this.state.skills} 
               addNewSkill={this.addNewSkill}
               removeSkill={this.removeSkill}/>
-          <Education />
-          <Contacts />
+          <Education 
+              outputInputValue={this.handleInfoChange}/>
+          <Contacts 
+              outputInputValue={this.handleInfoChange}/>
         </div>
-        <CVPreview />
+        <CVPreview 
+            info={this.state.info}/>
       </>
     );
   }

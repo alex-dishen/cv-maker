@@ -99,6 +99,12 @@
 
     .education-skills {
         margin-top: 15px;
+        gap: 30px;
+    }
+
+    .educationSection, 
+    .skillsSection {
+        width: 302px;
     }
 
     .skillsSection h2 {
@@ -120,13 +126,14 @@
     }
     
     .contacts {
-        justify-content: space-between;
+        gap: 30px;
     }
 
     .location-mail, 
     .number-portfolio {
         display: flex;
         flex-direction: column;
+        width: 302px;
         margin: 10px 0 10px 0;
         gap: 30px;
     }
@@ -135,6 +142,10 @@
     .number-portfolio > div {
         align-items: center;
         gap: 10px;
+
+        p{
+            word-break: break-all
+        }
     }
 
     .imgHolder {
@@ -143,6 +154,7 @@
         width: 40px;
         background-color: $primaryColor;
         border-radius: 50%;
+        flex-shrink: 0;
     }
 
     img {

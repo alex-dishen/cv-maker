@@ -1,19 +1,23 @@
-import React from "react";
 import education from '../assets/education.svg';
 
-class Education extends React.Component {
-    render() {
-        return (
-            <div className="education">
-                <h2><img src={education} alt="Education" />Education</h2>
-                <form>
-                    <input type="text" placeholder="School"/>
-                    <input type="text" placeholder="Degree"/>
-                    <input type="text" placeholder="Time frame"/>
-                </form>
-            </div>
-        );
-    }
+function Education({ outputInputValue }) {
+    return (
+        <div className="education">
+            <h2><img src={education} alt="Education" />Education</h2>
+            <form>
+                <input 
+                    type="text" 
+                    placeholder="School"
+                    onChange={outputInputValue}
+                    maxLength='66'/>
+                <input 
+                    type="text" 
+                    placeholder="Degree"
+                    onChange={outputInputValue}
+                    maxLength='150'/>
+            </form>
+        </div>
+    );
 }
 
 export default Education;
