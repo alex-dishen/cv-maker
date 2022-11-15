@@ -15,6 +15,7 @@ function Skills({
                     return (
                         <div className="skill" key={skill.id}>
                             <input 
+                                id={skill.id}
                                 type="text" 
                                 placeholder="Language or Technology"
                                 autoComplete="off"

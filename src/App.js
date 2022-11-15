@@ -133,7 +133,20 @@ class App extends React.Component {
     });
   }
 
-  handleSkillsChange(e) {}
+  handleSkillsChange(e) {
+    const newSkills = this.state.skills.map(skill => {
+      if(skill.id === e.target.id) {
+        skill.name = e.target.value;
+        return skill;
+      } else {
+        return skill;
+      }
+    });
+
+    this.setState({
+      ...this.state, skills: newSkills
+    });
+  }
 
   addNewExperience() {
     this.setState({
