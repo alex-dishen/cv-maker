@@ -17,6 +17,7 @@ function Skills({
                             <input 
                                 id={skill.id}
                                 type="text" 
+                                value={skill.name}
                                 placeholder="Language or Technology"
                                 autoComplete="off"
                                 onChange={outputInputValue}/>
@@ -33,7 +34,7 @@ function Skills({
                     )
                 })}
             </form>
-            {skills.length < 15 && 
+            {skills.length < 12 && 
                 <button 
                     type='submit'
                     className="newBtn" 

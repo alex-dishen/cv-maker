@@ -2,14 +2,16 @@ import save from '../assets/save.svg';
 import autofill from '../assets/autofill.svg';
 import gitHub from '../assets/github.svg'
 
-function Header() {
+function Header({ autoFillCV }) {
     return (
         <header>
             <div className="head">
                 <h1>CV Maker</h1>
                 <div className='buttonSection'>
                     <button><img src={save} alt="Save" /> <span>Save</span></button>
-                    <button><img src={autofill} alt="Autofill" /> <span>Autofill</span></button>
+                    <button onClick={autoFillCV}>
+                        <img src={autofill} alt="Autofill" /> <span>Autofill</span>
+                    </button>
                 </div>
             </div>
             <div className="createdBy">

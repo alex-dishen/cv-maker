@@ -6,7 +6,12 @@ import Experience from './components/Experience';
 import Skills from './components/Skills';
 import Contacts from './components/Contacts';
 import CVPreview from './components/Preview/CVPreview';
-import uniqid from 'uniqid'
+import uniqid from 'uniqid';
+import { 
+    filledInfo, 
+    filledSkills, 
+    filledExperience 
+} from './utils/filledCv';
 import './styles/App.css'
 import './styles/normalize.css';
 import './styles/cv_form.css'
@@ -21,10 +26,9 @@ class App extends React.Component {
           name: 'First Name',
           text: ''
         },
-
         {
           name: 'Last Name',
-          text: ''
+          text: ''        
         },
         {
           name: 'Niche: Font-End Developer',
@@ -93,6 +97,7 @@ class App extends React.Component {
       ]
     }
 
+    this.onAutoFillClicked = this.onAutoFillClicked.bind(this);
     this.handleInfoChange = this.handleInfoChange.bind(this);
     this.handleExperienceChange = this.handleExperienceChange.bind(this);
     this.handleSkillsChange = this.handleSkillsChange.bind(this);
@@ -134,9 +139,11 @@ class App extends React.Component {
   }
 
   handleSkillsChange(e) {
+    console.log(filledInfo);
+    const { id, value} = e.target;
     const newSkills = this.state.skills.map(skill => {
-      if(skill.id === e.target.id) {
-        skill.name = e.target.value;
+      if(skill.id === id) {
+        skill.name = value;
         return skill;
       } else {
         return skill;
@@ -146,6 +153,14 @@ class App extends React.Component {
     this.setState({
       ...this.state, skills: newSkills
     });
+  }
+
+  onAutoFillClicked() {
+    this.setState({
+      info: filledInfo,
+      skills: filledSkills,
+      experiences: filledExperience
+    })
   }
 
   addNewExperience() {
@@ -188,31 +203,36 @@ class App extends React.Component {
   }
 
   render() {
+    const { info, experiences, skills } = this.state;
     return (
       <>
         <div className='cvForm'>
-          <Header />
-          <PersonalData 
+          <Header 
+              autoFillCV={this.onAutoFillClicked}/>
+          <PersonalData
+              info={info}
               outputInputValue={this.handleInfoChange}/>
           <Experience 
-              experiences={this.state.experiences}
+              experiences={experiences}
               addNewExperience={this.addNewExperience}
               removeExperience={this.removeExperience}
               outputInputValue={this.handleExperienceChange}/>
           <Skills 
-              skills={this.state.skills} 
+              skills={skills} 
               addNewSkill={this.addNewSkill}
               removeSkill={this.removeSkill}
               outputInputValue={this.handleSkillsChange}/>
-          <Education 
+          <Education
+              info={info}
               outputInputValue={this.handleInfoChange}/>
-          <Contacts 
+          <Contacts
+              info={info}
               outputInputValue={this.handleInfoChange}/>
         </div>
         <CVPreview 
-            info={this.state.info}
-            skills={this.state.skills}
-            experiences={this.state.experiences}/>
+            info={info}
+            skills={skills}
+            experiences={experiences}/>
       </>
     );
   }

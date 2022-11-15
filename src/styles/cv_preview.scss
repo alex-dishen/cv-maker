@@ -93,6 +93,7 @@
     .experience > div p:nth-child(2) {
         display: flex;
         flex-wrap: wrap;
+        gap: 5px;
     }
 
     .education, 
@@ -124,7 +125,7 @@
         flex-direction: column;
         flex-wrap: wrap;
         left: 13px;
-        height: 200px;
+        height: 150px;
         gap: 25px;
 
         p {
