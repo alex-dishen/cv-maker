@@ -1,7 +1,12 @@
 import gears from '../assets/gears.svg';
 import bin from '../assets/bin.svg';
 
-function Skills({ skills, addNewSkill, removeSkill }) {
+function Skills({
+    skills,
+    addNewSkill,
+    removeSkill,
+    outputInputValue
+}) {
     return (
         <div className="skills">
             <h2><img src={gears} alt="Skills" />Skills</h2>
@@ -11,7 +16,9 @@ function Skills({ skills, addNewSkill, removeSkill }) {
                         <div className="skill" key={skill.id}>
                             <input 
                                 type="text" 
-                                placeholder="Language or Technology"/>
+                                placeholder="Language or Technology"
+                                autoComplete="off"
+                                onChange={outputInputValue}/>
 
                             {skills.length > 1 && 
                                 <button 

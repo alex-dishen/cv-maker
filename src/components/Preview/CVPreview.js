@@ -5,17 +5,21 @@ import EducationPrev from "./EducationPreview";
 import SkillsPrev from "./SkillsPreview";
 import '../../styles/cv_preview.css'
 
-function CVPreview({ info }) {
+function CVPreview({ info, skills, experiences }) {
     return (
         <div className="cvPreview">
             <NameAndPitch 
                 info={info}/>
-            <ExperiencePrev />
+            <ExperiencePrev 
+                experiences={experiences}/>
+
             <div className="education-skills">
                 <EducationPrev 
                     info={info}/>
-                <SkillsPrev />
+                <SkillsPrev 
+                    skills={skills}/>
             </div>
+            
             <Contacts 
                 info={info}/>
         </div>

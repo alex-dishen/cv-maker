@@ -8,25 +8,29 @@ function Contacts({ outputInputValue }) {
                 <input 
                     type="text"
                     placeholder="Address"
-                    onChange={outputInputValue}
-                    maxLength='80'/>
+                    maxLength='80'
+                    autoComplete="off"
+                    onChange={outputInputValue}/>
                 <div className="contactsSection">
                     <input 
                         type="text"
                         placeholder="E-Mail"
-                        onChange={outputInputValue}
-                        maxLength='80'/>
+                        maxLength='80'
+                        autoComplete="off"
+                        onChange={outputInputValue}/>
                     <input 
                         type="tel"
                         placeholder="Phone number"
-                        onChange={outputInputValue}
-                        maxLength='15'/>
+                        maxLength='15'
+                        autoComplete="off"
+                        onChange={outputInputValue}/>
                 </div>
                 <input 
                     type="link"
                     placeholder="Link to portfolio"
-                    onChange={outputInputValue}
-                    maxLength='80'/>
+                    maxLength='80'
+                    autoComplete="off"
+                    onChange={outputInputValue}/>
             </form>
         </div>
     );

@@ -86,7 +86,15 @@
         gap: 30px;
     }
 
-    .experience > div,
+    .experience > div {
+        width: max(100%, 302px);
+    }
+
+    .experience > div p:nth-child(2) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
     .education, 
     .skillsSection {
         width: 100%;

@@ -75,7 +75,13 @@
 .cvPreview .experience {
   gap: 30px;
 }
-.cvPreview .experience > div,
+.cvPreview .experience > div {
+  width: max(100%, 302px);
+}
+.cvPreview .experience > div p:nth-child(2) {
+  display: flex;
+  flex-wrap: wrap;
+}
 .cvPreview .education,
 .cvPreview .skillsSection {
   width: 100%;

@@ -9,25 +9,28 @@ function PersonalData({ outputInputValue }) {
                     <input 
                         type="text" 
                         placeholder="First Name"
-                        onChange={outputInputValue}
-                        maxLength='15'/>
+                        maxLength='15'
+                        autoComplete="off"
+                        onChange={outputInputValue}/>
                     <input 
                         type="text"
                         placeholder="Last Name"
-                        onChange={outputInputValue}
-                        maxLength='13'/>
+                        maxLength='13'
+                        autoComplete="off"
+                        onChange={outputInputValue}/>
                 </div>
                 <input 
                     type="text"
                     placeholder="Niche: Font-End Developer"
-                    onChange={outputInputValue}
-                    maxLength='26'/>
+                    maxLength='26'
+                    autoComplete="off"
+                    onChange={outputInputValue}/>
                 <textarea 
                     placeholder="Tell something about yourself to stand out
                                  from other candidates"
-                    onChange={outputInputValue}
-                    maxLength='520'>
-                </textarea>
+                    maxLength='520'
+                    autoComplete="off"
+                    onChange={outputInputValue}/>
             </form>
         </div>
     );

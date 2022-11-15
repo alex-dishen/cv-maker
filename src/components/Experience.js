@@ -1,7 +1,12 @@
 import tools from '../assets/experience.svg';
 import bin from '../assets/bin.svg'
 
-function Experience({ experiences, addNewExperience, removeExperience}) {
+function Experience({
+    experiences,
+    addNewExperience,
+    removeExperience,
+    outputInputValue
+}) {
     return (
         <div className="experience">
             <h2><img src={tools} alt="Experience" />Work Experience</h2>
@@ -21,11 +26,51 @@ function Experience({ experiences, addNewExperience, removeExperience}) {
                         }
 
                         <form>
-                            <input type="text" placeholder="Company"/>
-                            <input type="text" placeholder="Position"/>
-                            <input type="text" placeholder="Start date of employment"/>
-                            <input type="text" placeholder="End date of employment"/>
-                            <textarea placeholder="Your main occupation, daily tasks and work field"></textarea>
+                            <input
+                                id={experience.id}
+                                name='position'
+                                type="text"
+                                placeholder="Position"
+                                maxLength='38'
+                                autoComplete="off"
+                                value={experience.position}
+                                onChange={outputInputValue}/>
+                            <input 
+                                id={experience.id}
+                                name='company'
+                                type="text"
+                                placeholder="Company"
+                                maxLength='30'
+                                autoComplete="off"
+                                value={experience.company}
+                                onChange={outputInputValue}/>
+                            <input
+                                id={experience.id}
+                                name='start'
+                                type="text"
+                                placeholder="Start date of employment"
+                                maxLength='12'
+                                autoComplete="off"
+                                value={experience.start}
+                                onChange={outputInputValue}/>
+                            <input
+                                id={experience.id}
+                                name='end'
+                                type="text"
+                                placeholder="End date of employment"
+                                maxLength='12'
+                                autoComplete="off"
+                                value={experience.end}
+                                onChange={outputInputValue}/>
+                            <textarea 
+                                id={experience.id}
+                                name='dailyWork'
+                                placeholder="Your main occupation, 
+                                             daily tasks and work field"
+                                maxLength='400'
+                                autoComplete="off"
+                                value={experience.dailyWork}
+                                onChange={outputInputValue}/>
                         </form>
                     </div>
                 );

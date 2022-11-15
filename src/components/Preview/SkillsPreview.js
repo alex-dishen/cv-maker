@@ -1,21 +1,14 @@
-import React from "react";
-
-class SkillsPrev extends React.Component {
-    render() {
-        return(
-            <div className="skillsSection">
-                <h2>SKILLS</h2>
-                <div className="skills">
-                    <p>HTML</p>
-                    <p>CSS</p>
-                    <p>JavaScript</p>
-                    <p>React</p>
-                    <p>Sass</p>
-                    <p>Git</p>
-                </div>
+function SkillsPrev({ skills }) {
+    return(
+        <div className="skillsSection">
+            <h2>SKILLS</h2>
+            <div className="skills">
+                {skills.map(skill => {
+                    return <p key={skill.id}>{skill.name}</p>
+                })}
             </div>
-        );
-    }
+        </div>
+    );
 }
 
 export default SkillsPrev;

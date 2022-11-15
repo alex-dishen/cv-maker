@@ -62,28 +62,40 @@ class App extends React.Component {
 
       newExperience: {
         id: uniqid(),
+        position: '',
+        company: '',
+        start: '',
+        end: '',
+        dailyWork: '',
       },
 
       experiences: [
         {
           id: uniqid(),
+          position: '',
+          company: '',
+          start: '',
+          end: '',
+          dailyWork: '',
         },
       ],
 
       newSkill: {
         id: uniqid(),
-        skill: '',
+        name: '',
       },
 
       skills: [
           {
               id: uniqid(),
-              skill: ''
+              name: ''
           },
       ]
     }
 
     this.handleInfoChange = this.handleInfoChange.bind(this);
+    this.handleExperienceChange = this.handleExperienceChange.bind(this);
+    this.handleSkillsChange = this.handleSkillsChange.bind(this);
     this.addNewExperience = this.addNewExperience.bind(this);
     this.removeExperience = this.removeExperience.bind(this);
     this.addNewSkill = this.addNewSkill.bind(this);
@@ -91,7 +103,6 @@ class App extends React.Component {
   }
 
   handleInfoChange(e) {
-    console.log(e.target.value.length)
     const newInfo = this.state.info.map((information) => {
       if(information.name === e.target.placeholder) {
         information.text = e.target.value;
@@ -105,6 +116,24 @@ class App extends React.Component {
       ...this.state, info: newInfo,
     });
   }
+
+  handleExperienceChange(e) {
+    const { name, value, id } = e.target;
+    const newExperience = this.state.experiences.map(experience => {
+      if(experience.id === id) {
+        experience[name] = value;
+        return experience;
+      } else {
+        return experience;
+      }
+    });
+
+    this.setState({
+      ...this.state, experiences: newExperience
+    });
+  }
+
+  handleSkillsChange(e) {}
 
   addNewExperience() {
     this.setState({
@@ -130,7 +159,7 @@ class App extends React.Component {
       skills: this.state.skills.concat(this.state.newSkill),
 
       newSkill: {
-        skill: '', 
+        name: '', 
         id: uniqid()
       },
     });
@@ -155,18 +184,22 @@ class App extends React.Component {
           <Experience 
               experiences={this.state.experiences}
               addNewExperience={this.addNewExperience}
-              removeExperience={this.removeExperience}/>
+              removeExperience={this.removeExperience}
+              outputInputValue={this.handleExperienceChange}/>
           <Skills 
               skills={this.state.skills} 
               addNewSkill={this.addNewSkill}
-              removeSkill={this.removeSkill}/>
+              removeSkill={this.removeSkill}
+              outputInputValue={this.handleSkillsChange}/>
           <Education 
               outputInputValue={this.handleInfoChange}/>
           <Contacts 
               outputInputValue={this.handleInfoChange}/>
         </div>
         <CVPreview 
-            info={this.state.info}/>
+            info={this.state.info}
+            skills={this.state.skills}
+            experiences={this.state.experiences}/>
       </>
     );
   }

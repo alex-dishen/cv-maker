@@ -8,13 +8,15 @@ function Education({ outputInputValue }) {
                 <input 
                     type="text" 
                     placeholder="School"
-                    onChange={outputInputValue}
-                    maxLength='66'/>
+                    maxLength='66'
+                    autoComplete="off"
+                    onChange={outputInputValue}/>
                 <input 
                     type="text" 
                     placeholder="Degree"
-                    onChange={outputInputValue}
-                    maxLength='150'/>
+                    maxLength='150'
+                    autoComplete="off"
+                    onChange={outputInputValue}/>
             </form>
         </div>
     );
