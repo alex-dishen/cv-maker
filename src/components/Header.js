@@ -1,14 +1,13 @@
-import save from '../assets/save.svg';
 import autofill from '../assets/autofill.svg';
-import gitHub from '../assets/github.svg'
+import gitHub from '../assets/github.svg';
 
-function Header({ autoFillCV }) {
+function Header({ autoFillCV, savePDF }) {
     return (
         <header>
             <div className="head">
                 <h1>CV Maker</h1>
                 <div className='buttonSection'>
-                    <button><img src={save} alt="Save" /> <span>Save</span></button>
+                    {savePDF()}
                     <button onClick={autoFillCV}>
                         <img src={autofill} alt="Autofill" /> <span>Autofill</span>
                     </button>

@@ -12,15 +12,21 @@ import {
     filledSkills, 
     filledExperience 
 } from './utils/filledCv';
-import './styles/App.css'
+import save from './assets/save.svg';
+import ReactToPrint from 'react-to-print';
+import './styles/App.css';
 import './styles/normalize.css';
-import './styles/cv_form.css'
+import './styles/cv_form.css';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
+      isHovered: false,
+
+      borderRadius: '30px',
+
       info: [
         {
           name: 'First Name',
@@ -105,6 +111,9 @@ class App extends React.Component {
     this.removeExperience = this.removeExperience.bind(this);
     this.addNewSkill = this.addNewSkill.bind(this);
     this.removeSkill = this.removeSkill.bind(this);
+    this.savePdfBtn = this.savePdfBtn.bind(this);
+    this.onMouseEnter = this.onMouseEnter.bind(this);
+    this.onMouseLeave = this.onMouseLeave.bind(this);
   }
 
   handleInfoChange(e) {
@@ -139,7 +148,6 @@ class App extends React.Component {
   }
 
   handleSkillsChange(e) {
-    console.log(filledInfo);
     const { id, value} = e.target;
     const newSkills = this.state.skills.map(skill => {
       if(skill.id === id) {
@@ -202,12 +210,44 @@ class App extends React.Component {
     });
   }
 
+savePdfBtn() {    
+    return (
+      <ReactToPrint 
+          trigger={() => {
+            return <button 
+                      className='saveBtn'
+                      onMouseEnter={this.onMouseEnter}
+                      onMouseLeave={this.onMouseLeave}>
+                        <img src={save} alt="Save"/><span>Save</span>
+                    </button>
+          }}
+          content = {() => this.componentRef}
+          documentTitle='Resume'
+          pageStyle = 'print' />
+    );
+}
+
+onMouseEnter() {
+  this.setState({
+    isHovered: true,
+    borderRadius: '0'
+  });
+}
+
+onMouseLeave() {
+  this.setState({
+    isHovered: false,
+    borderRadius: '30px'
+  });
+}
+
   render() {
     const { info, experiences, skills } = this.state;
     return (
       <>
         <div className='cvForm'>
-          <Header 
+          <Header
+              savePDF={this.savePdfBtn}
               autoFillCV={this.onAutoFillClicked}/>
           <PersonalData
               info={info}
@@ -232,7 +272,10 @@ class App extends React.Component {
         <CVPreview 
             info={info}
             skills={skills}
-            experiences={experiences}/>
+            experiences={experiences}
+            ref={el => (this.componentRef=el)}
+            borderRadius={this.state.borderRadius}
+        />
       </>
     );
   }

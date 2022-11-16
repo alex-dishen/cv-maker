@@ -13,6 +13,14 @@ a {
     transition: 0.2s;
 }
 
+.saveBtn {
+    &:hover {
+        .cvForm {
+            border-radius: 0;
+        }
+    }
+}
+
 button:active, 
 a:active {
     transform: scale(0.9);
@@ -20,7 +28,6 @@ a:active {
 
 .cvForm {
     justify-self: center;
-    margin: 30px 0 30px 0;
     grid-area: cvForm;
 
     h1, 

@@ -15,6 +15,7 @@ body {
     grid-template-columns: repeat(2, auto);
     grid-template-areas: 'cvForm cvPreview';
     justify-content: space-evenly;
+    padding: 30px 0 30px 0;
 
     color: white;
     font-family: Kumbh Sans, sans-serif;
