@@ -3,12 +3,12 @@ import uniqid from 'uniqid';
 const filledInfo = [
     {
         name: 'First Name',
-        text: 'Oleksandr'
+        text: 'Mighty'
       },
 
       {
         name: 'Last Name',
-        text: 'Didyshen'
+        text: 'Thor'
       },
       {
         name: 'Niche: Font-End Developer',
@@ -20,28 +20,28 @@ const filledInfo = [
       },
       {
         name: 'School',
-        text: 'KHMELNYTSKYI NATIONAL UNIVERSITY'
+        text: 'Asgard national university'
       },
       {
         name: 'Degree',
-        text: `Bachelor Degree: Germanic Philology and Translation Studies:
-               English and Second Foreign Language`
+        text: `Bachelor Degree: Nordic Philology and Translation Studies:
+               Scandinavian and Second Foreign Language`
       },
       {
         name: 'Address',
-        text: 'Ukraine, Khmelnytskyi'
+        text: 'Universe, Asgard'
       },
       {
         name: 'E-Mail',
-        text: 'didyshen.oleksandr@gmail.com'
+        text: 'thor.odinson@gmail.com'
       },
       {
         name: 'Phone number',
-        text: '+380982732201'
+        text: '+015982732201'
       },
       {
         name: 'Link to portfolio',
-        text: 'https://github.com/alex-dishen'
+        text: 'https://www.pinterest.com/javidante/thor/'
       }
 ];
 

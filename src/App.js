@@ -13,6 +13,7 @@ import {
     filledExperience 
 } from './utils/filledCv';
 import save from './assets/save.svg';
+import examplePic from './assets/example.png'
 import ReactToPrint from 'react-to-print';
 import './styles/App.css';
 import './styles/normalize.css';
@@ -24,8 +25,9 @@ class App extends React.Component {
 
     this.state = {
       isHovered: false,
-
       borderRadius: '30px',
+      fileSrc: '',
+      fileName: '',
 
       info: [
         {
@@ -114,6 +116,7 @@ class App extends React.Component {
     this.savePdfBtn = this.savePdfBtn.bind(this);
     this.onMouseEnter = this.onMouseEnter.bind(this);
     this.onMouseLeave = this.onMouseLeave.bind(this);
+    this.uploadPicture = this.uploadPicture.bind(this);
   }
 
   handleInfoChange(e) {
@@ -165,6 +168,8 @@ class App extends React.Component {
 
   onAutoFillClicked() {
     this.setState({
+      fileSrc: examplePic,
+      fileName: 'example_pic.jpg',
       info: filledInfo,
       skills: filledSkills,
       experiences: filledExperience
@@ -210,7 +215,7 @@ class App extends React.Component {
     });
   }
 
-savePdfBtn() {    
+  savePdfBtn() {    
     return (
       <ReactToPrint 
           trigger={() => {
@@ -225,24 +230,37 @@ savePdfBtn() {
           documentTitle='Resume'
           pageStyle = 'print' />
     );
-}
+  }
 
-onMouseEnter() {
-  this.setState({
-    isHovered: true,
-    borderRadius: '0'
-  });
-}
+  onMouseEnter() {
+    this.setState({
+      isHovered: true,
+      borderRadius: '0'
+    });
+  }
 
-onMouseLeave() {
-  this.setState({
-    isHovered: false,
-    borderRadius: '30px'
-  });
-}
+  onMouseLeave() {
+    this.setState({
+      isHovered: false,
+      borderRadius: '30px'
+    });
+  }
+
+  uploadPicture(e) {
+    this.setState({
+      fileSrc: URL.createObjectURL(e.target.files[0]),
+      fileName: e.target.files[0].name
+    });
+  }
 
   render() {
-    const { info, experiences, skills } = this.state;
+    const { 
+      info,
+      experiences,
+      skills,
+      fileSrc,
+      fileName,
+      borderRadius } = this.state;
     return (
       <>
         <div className='cvForm'>
@@ -251,7 +269,9 @@ onMouseLeave() {
               autoFillCV={this.onAutoFillClicked}/>
           <PersonalData
               info={info}
-              outputInputValue={this.handleInfoChange}/>
+              fileName={fileName}
+              outputInputValue={this.handleInfoChange}
+              uploadPicture={this.uploadPicture}/>
           <Experience 
               experiences={experiences}
               addNewExperience={this.addNewExperience}
@@ -273,8 +293,9 @@ onMouseLeave() {
             info={info}
             skills={skills}
             experiences={experiences}
+            fileSrc={fileSrc}
             ref={el => (this.componentRef=el)}
-            borderRadius={this.state.borderRadius}
+            borderRadius={borderRadius}
         />
       </>
     );

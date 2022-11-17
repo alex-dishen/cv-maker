@@ -7,11 +7,17 @@ import '../../styles/cv_preview.css'
 
 class CVPreview extends React.Component {
     render() {
-        const { info, skills, experiences, borderRadius } = this.props 
+        const { 
+            info,
+            skills,
+            experiences,
+            borderRadius,
+            fileSrc } = this.props 
         return (
             <div className="cvPreview" style={{borderRadius: borderRadius}}>
                 <NameAndPitch 
-                    info={info}/>
+                    info={info}
+                    fileSrc={fileSrc}/>
                 <ExperiencePrev 
                     experiences={experiences}/>
     

@@ -105,21 +105,31 @@ a:active {
   gap: 15px;
 }
 .cvForm input, .cvForm textarea,
-.cvForm .newBtn {
+.cvForm .newBtn,
+.cvForm label {
   background-color: rgb(41, 41, 41);
   color: white;
   border: none;
   border-radius: 13px;
   transition: 0.3s;
 }
-.cvForm input, .cvForm textarea {
+.cvForm input, .cvForm textarea,
+.cvForm label {
   width: 100%;
   height: 40px;
   padding: 10px;
   outline: none;
 }
-.cvForm input:hover, .cvForm textarea:hover, .cvForm input:focus, .cvForm textarea:focus {
+.cvForm input:hover, .cvForm textarea:hover, .cvForm input:focus, .cvForm textarea:focus,
+.cvForm label:hover,
+.cvForm label:focus {
   background-color: rgb(46, 46, 46);
+}
+.cvForm label {
+  cursor: pointer;
+}
+.cvForm input[type=file], .cvForm textarea[type=file] {
+  display: none;
 }
 .cvForm textarea {
   height: 150px;

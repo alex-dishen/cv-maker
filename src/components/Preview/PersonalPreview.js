@@ -3,7 +3,7 @@ import phone from '../../assets/phone.svg';
 import mail from '../../assets/mail.svg';
 import portfolio from '../../assets/portfolio.svg';
 
-function NameAndPitch({ info }) {
+function NameAndPitch({ info, fileSrc }) {
     return(
         <div>
             <div className="head">
@@ -12,7 +12,7 @@ function NameAndPitch({ info }) {
                     <h1 className="lastName">{info[1].text.toUpperCase()}</h1>
                     <div className="developer">{info[2].text}</div>
                 </div>
-                <div className="image"></div>
+                <div className="picture"><img src={fileSrc}/></div>
             </div>
             <p className="pitch">{info[3].text}</p>
             <hr />

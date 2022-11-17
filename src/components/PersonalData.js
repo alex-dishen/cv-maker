@@ -1,6 +1,6 @@
 import passport from '../assets/passport.svg';
 
-function PersonalData({ outputInputValue, info }) {
+function PersonalData({ outputInputValue, info, uploadPicture, fileName }) {
     return (
         <div className="personalData">
             <h2><img src={passport} alt="passport" />Personal Data</h2>
@@ -28,6 +28,14 @@ function PersonalData({ outputInputValue, info }) {
                     maxLength='26'
                     autoComplete="off"
                     onChange={outputInputValue}/>
+                <label htmlFor="file">
+                    {fileName && fileName}
+                    {!fileName && 'Chose Picture'}
+                </label>
+                <input 
+                    id='file'
+                    type="file"
+                    onChange={uploadPicture}/>
                 <textarea 
                     value={info[3].text}
                     placeholder="Tell something about yourself to stand out

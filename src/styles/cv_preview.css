@@ -45,13 +45,20 @@
   font-size: 0.9375rem;
   border-radius: 20px;
 }
-.cvPreview .image {
+.cvPreview .picture {
   position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   right: 20px;
-  height: 120px;
-  width: 120px;
+  height: 90px;
+  width: 90px;
   background-color: white;
   border-radius: 50%;
+}
+.cvPreview .picture img {
+  height: 140px;
 }
 .cvPreview .pitch {
   font-style: italic;
