@@ -20,5 +20,18 @@ The **CV Maker** project is created according to the assignment from **The Odin 
 * Learned how to create PDF from class component.
 * Learned how to upload and then show a picture in React.
 
+## **Getting Started**
+```
+HTTPS - git clone https://github.com/alex-dishen/cv-maker.git
+
+SSH - git clone git@github.com:alex-dishen/cv-maker.git
+
+cd cv-maker
+
+npm install
+
+npm start
+```
+
 ## **Navigation**
 * See my previous project [Library](https://github.com/alex-dishen/tic-tac-toe)
