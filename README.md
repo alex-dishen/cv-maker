@@ -34,4 +34,5 @@ npm start
 ```
 
 ## **Navigation**
+* See my next project [Memory Card](https://github.com/alex-dishen/memory-card)
 * See my previous project [Library](https://github.com/alex-dishen/tic-tac-toe)
